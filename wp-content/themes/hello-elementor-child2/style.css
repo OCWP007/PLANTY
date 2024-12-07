@@ -1,0 +1,912 @@
+/*
+Theme Name: Hello Elementor Child 2
+Theme URI: https://elementor.com/hello-theme/?utm_source=wp-themes&utm_campaign=theme-uri&utm_medium=wp-dash
+Template: hello-elementor
+Author: Elementor Team
+Author URI: https://elementor.com/?utm_source=wp-themes&utm_campaign=author-uri&utm_medium=wp-dash
+Description: Hello Elementor is a lightweight and minimalist WordPress theme that was built specifically to work seamlessly with the Elementor site builder plugin. The theme is free, open-source, and designed for users who want a flexible, easy-to-use, and customizable website. The theme, which is optimized for performance, provides a solid foundation for users to build their own unique designs using the Elementor drag-and-drop site builder. Its simplicity and flexibility make it a great choice for both beginners and experienced Web Creators.
+Tags: accessibility-ready,flexible-header,custom-colors,custom-menu,custom-logo,featured-images,rtl-language-support,threaded-comments,translation-ready
+Version: 3.1.1.1729234549
+Updated: 2024-10-18 08:55:49
+
+*/
+
+/* Conteneur principal centré sur la page */
+.page-container {
+  display: flex;               
+  flex-direction: column;
+  justify-content: center;       /* Centre horizontalement */
+  align-items: center;           /* Centre verticalement */
+  width: 100%;                  
+  height: 75vh;                 /* Hauteur de la fenêtre */
+  background-color: #ECE2DA;     
+  border-radius: 10% 10% 40% 40% / 0% 0% 10% 10% ;
+
+}
+
+/* Conteneur contenant le titre */
+.page-conttitre {
+  display: flex;                 
+  flex-direction: column;
+  background-color: #ECE2DA;     
+  padding-top: 85px;
+}
+
+.image-original-size {
+  width: auto;      /* Utilise la largeur native de l'image */
+  height: auto;     /* Utilise la hauteur native de l'image */
+  max-width: none;  /* Désactive toute limite de largeur */
+  max-height: none; /* Désactive toute limite de hauteur */
+}
+
+@media (min-width: 350px) and (max-width: 830px) {
+  .image-original-size {
+    width: 70%; /* Réduit la taille de l'image à 70% de la largeur du conteneur */
+    height: auto; /* Garde les proportions de l'image */
+  }
+}
+
+
+
+.bloc-container {
+  display: flex;              
+  justify-content: center;       
+  align-items: top;           
+  width: 100%;                   
+  height: 100vh;                
+  background-color: #ECE2DA;    
+  border-radius: 10% 10% 40% 40% / 0% 0% 10% 10% ;
+}
+
+/* Conteneur des images */
+.image-container {
+  position: relative;            /* Position de référence pour les images */
+  width: 60vw;                   /* Largeur adaptative (50% de la largeur de la fenêtre) */
+  max-width: 1400px;              /* Largeur maximale */
+  aspect-ratio: 3 / 2;           /* Maintient un ratio fixe (exemple 3:2) */
+  overflow: visible;             /* Permet aux images de déborder si nécessaire */
+}
+
+/* Images */
+.image-can {
+  position: absolute;            /* Fixe chaque image à une position précise */
+  max-width: 100%;               /* Limite la taille des images à celle du conteneur */
+  height: auto;                  /* Respecte les proportions */
+  height: auto;                  /* Respecte les proportions de l'image */
+}
+
+/* Image centrale */
+.bouteille {
+  z-index: 3;                    /* Passe au-dessus des autres images */
+  left: 50%;                     
+  top: 50%;                     
+  transform: translate(-50%, -50%);
+  flex-shrink: 1;
+  width: calc(33.33% - 10px);    /* Chaque image occupe un tiers du conteneur */
+  height: auto;                  /* Respecte les proportions de l'image */
+}
+
+/* Image à gauche */
+.feuille-gauche {
+  z-index: 0;                    /* Passe sous l'image centrale */
+  left: 33.365%;                     /* Position légèrement à gauche */
+  top: 50%;                      /* Centrée verticalement */
+  transform: translate(-50%, -50%);
+  flex-shrink: 1;
+  width: calc(33.33% - 10px);    /* Chaque image occupe un tiers du conteneur */
+  height: auto;                  /* Respecte les proportions de l'image */
+}
+
+/* Image à droite */
+.feuille-droite {
+  z-index: 0 ! important;                    /* Passe sous l'image centrale */
+  right: 34%;                    /* Position légèrement à droite */
+  top: 50%;                      /* Centrée verticalement */
+  transform: translate(50%, -50%);
+  flex-shrink: 1;
+  width: calc(33.33% - 10px);    /* Chaque image occupe un tiers du conteneur */
+  height: auto;                  /* Respecte les proportions de l'image */
+}
+
+.custom-container-bottle {
+    width: 100vw; /* Largeur pleine de l'écran */
+    height: 50vh; /* Hauteur réduite à 50% de l'écran */
+    background-color: #f5f5dc; /* Couleur beige de fond */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10% 10% 40% 40% / 0% 0% 10% 10% ;
+}
+
+.body {
+    background-color: white  !important;
+}
+
+.test h2 {
+  color: white  !important;
+}
+
+.backg {
+  background-color: white  !important;
+}
+
+/* Styles pour le conteneur principal en haut */
+.bottle-container1 {
+  width: 100%; /* Largeur pleine de l'écran */
+  height: 90vh; /* Hauteur réduite à 50% de l'écran */
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10% 10% 40% 40% / 0% 0% 10% 10%;
+  overflow: hidden;
+}
+
+.container-pictures {
+  display: flex;
+  justify-content: space-between; /* Espace égal entre les images */
+  align-items: center;           /* Centrer les images verticalement si nécessaire */
+  width: 100%;                   
+  max-width: 100vw;              /* Empêcher de dépasser la largeur de l'écran */
+  padding: 10px;                 
+  box-sizing: border-box;        /* Inclure le padding dans la largeur totale */
+  overflow: hidden;
+}
+
+/* Style pour les images */
+.container-pictures img {
+  flex: 1 1 30%;              /* Chaque image prend 30% de la largeur du conteneur */
+  max-width: 100%;               
+  height: auto;                
+  object-fit: cover;             /* Remplir le cadre sans distorsion */
+  margin: 0 5px;                 /* Espace entre les images */
+}
+
+/* Centrer le formulaire entier */
+.wpcf7-spinner {
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Centrer le formulaire entier */
+.wpcf7 form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%; /* Ajustez la largeur selon vos besoins */
+  margin: 0 auto;
+}
+
+/* Centrer chaque label individuellement */
+.wpcf7 form label {
+  display: flex;
+  flex-direction: column;
+ /* align-items: center;*/
+   margin-bottom: 10px; /* Espace entre chaque champ */
+  align-items: flex-start;
+}
+
+/* Centrer le bouton d'envoi */
+.wpcf7 form input[type="submit"] {
+  align-self: center;
+}
+
+/* Formulaire de la page "Commander"
+
+/* Texte blanc pour les labels */
+.custom-form-style2 label {
+  color: white; 
+  display: block; /* Chaque label sur une nouvelle ligne */
+  font-family: 'Syne', sans-serif; 
+  font-size: 16px; 
+  line-height: 2; /* Espacement entre les lignes pour une meilleure lisibilité */
+}
+
+/* Champs de saisie avec bords blancs et arrondis */
+.custom-form-style2 input[type="text"],
+.custom-form-style2 input[type="email"],
+.custom-form-style2 textarea {
+  border: 2px solid white; /* Bords blancs */
+  border-radius: 5px; /* Bords arrondis */
+  padding: 15px; /* Augmente le padding pour agrandir la hauteur (initialement 10px) */
+  height: calc(4.5 * 1em); /* Augmente la hauteur des champs */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ajout d'espace entre les champs */
+.custom-form-style2 input[type="text"],
+.custom-form-style2 input[type="email"],
+.custom-form-style2 textarea,
+.custom-form-style2 input[type="submit"] {
+    margin-bottom: 10px;
+}
+
+/* Bouton d'envoi personnalisé */
+.custom-form-style2 input[type="submit"] {
+  background-color: #D2776A;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Bouton au survol */
+.custom-form-style2 input[type="submit"]:hover {
+  background-color: #C02E44;
+}
+
+/* Formulaire de la page "Nous rencontrer"
+
+/* Texte noir pour les labels */
+.custom-form-style label {
+  color: black; /* Texte noir */
+  line-height: 2; /* Espacement entre les lignes pour une meilleure lisibilité */
+  font-family: 'Syne', sans-serif; 
+  font-size: 20px; 
+  display: block; /* Chaque label sur une nouvelle ligne */
+}
+
+/* Champs de saisie avec bords blancs et arrondis */
+.custom-form-style input[type="text"],
+.custom-form-style input[type="email"],
+.custom-form-style textarea {
+  border: 2px solid white; /* Bords blancs */
+  border-radius: 5px; /* Bords arrondis */
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ajout d'espace entre les champs */
+.custom-form-style input[type="text"],
+.custom-form-style input[type="email"],
+.custom-form-style textarea,
+.custom-form-style input[type="submit"] {
+  margin-bottom: 10px;
+}
+
+/* Bouton d'envoi personnalisé */
+.custom-form-style input[type="submit"] {
+  background-color: #D2776A;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Bouton au survol */
+.custom-form-style input[type="submit"]:hover {
+  background-color: #C02E44;
+}
+
+
+
+.flex-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.fruit-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px; /* Augmente la taille du conteneur pour accueillir les grandes images */
+}
+
+.fruit-item img {
+  width: 200px; /* Triple la taille de l'image par rapport aux dimensions initiales */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.fruit-item-FP {
+  display: flex;
+  flex-direction: raw;
+  align-items: center;
+  max-width: 200px; /* Augmente la taille du conteneur pour accueillir les grandes images */
+}
+
+.fruit-item-FP img {
+  width: 500px; /* Triple la taille de l'image par rapport aux dimensions initiales */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.commande-fruits {
+  margin: 10px;
+
+}
+
+.syne-police-verte {
+  font-family: "Syne", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-size: calc(14px + 1vw) ! important ; /* Taille flexible */
+}
+
+
+.header-menus {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px; /* Pour ajuster l'écart entre les deux menus */
+}
+
+.primary-menu  {
+  display: flex;
+  list-style: none; /* Supprime les puces par défaut */
+  padding: 0;
+  margin: 0;
+}
+
+.secondary-menu {
+  display: flex;
+  list-style: none; /* Supprime les puces par défaut */
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  display: flex; /* Active Flexbox pour les éléments li */
+  align-items: center; /* Centre verticalement le contenu */
+  justify-content: center; /* (Optionnel) Centre aussi horizontalement */
+}
+
+/* Conteneur principal du header */
+.custom-header {
+  background-color: #fff;
+  font-family: 'Syne', sans-serif;
+  color: #000;
+}
+
+/* Conteneur flex pour aligner le logo et les menus */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%; /* Ajustez selon la largeur souhaitée */
+  margin: 0 auto;
+}
+
+/* Logo à gauche */
+/*.logo img {
+  max-height: 50px; /* Ajustez la taille du logo */
+/*}*/
+
+/* Logo à gauche */
+.logo img {
+  width: 250px;  /* Largeur fixe de l'image */
+  height:110px;  /* Hauteur fixe de l'image */
+  object-fit: contain; /* Maintient le ratio sans déformer */
+}
+
+/* Menus à droite */
+.menus {
+  display: flex;
+  flex-direction: raw;
+  gap: 20px; /* Espace entre les deux menus */
+}
+
+/* Styles des menus */
+.menu {
+  display: flex;
+}
+
+.menu-items {
+  display: flex;
+  list-style: none;
+  /*gap: 15px;*/
+  padding: 0;
+}
+
+.menu-items li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.menu-items li a:hover {
+  color: #666;
+}
+
+.menu-menu_entete {
+  padding: 0 ! important;
+}
+
+.menu-item-sec { /* Menu Commander */
+  display: flex;
+  list-style: none;
+  color: white;
+  padding: 27px;
+}
+
+.menu-menu_commander-container {
+  background-color: #E0B9B4 !important;
+  display: flex;
+  justify-content: center; /* Aligne les éléments horizontalement */
+  align-items: center; /* Aligne les éléments verticalement */
+  height: 100%; /* Assurez-vous que le conteneur a une hauteur définie */
+}
+
+.menu-menu_commander-container:hover {
+  background-color: #C02E44 !important;
+  display: flex;
+  justify-content: center; /* Aligne les éléments horizontalement */
+  align-items: center; /* Aligne les éléments verticalement */
+  height: 100%; /* Assurez-vous que le conteneur a une hauteur définie */
+}
+
+.menu-item-1173 {
+  color: white ! important;
+}
+
+.menu-item-502:hover { /* Container menu Commander */
+  color: white ! important;
+  background-color: red;
+}
+
+.menu-item-sec li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.menu-item-sec li a:hover {
+  color: white;
+}
+
+.titre_fruit {
+  color: white;
+  font-weight: 800;
+}
+
+.titre-commande {
+  color: white;              
+  font-size: 2em;            /* Taille de base adaptable (16px par défaut, selon le contexte) */
+  font-weight: 600;          /* Plus de gras pour la police (semi-bold) */
+  text-align: left;          /* Alignement à gauche, si ce n’est pas déjà par défaut */
+}
+
+.sous-titre-command p {
+  color: white;              
+  font-size: 1em;           
+  font-weight: 400;         
+  text-align: left;        
+}
+
+.titre-commande-container hr {
+  width: 100%;               
+  border: none;              
+  border-top: 2px solid white; 
+  margin: 10px 0;           
+}
+
+.alignement {
+  display: flex;           
+  flex-direction: row;      
+  justify-content: flex-start; 
+  align-items: top;      
+}
+
+.haut-boutons {
+  align-items: center;
+}
+
+.fruit-button {
+  background-color: #e0b9b4;
+  border-color: #e0b9b4;
+  border-radius: 10%;
+  color: white;
+}
+
+.alignement-items {
+    align-items: flex-start;
+}
+
+/* Conteneur Vos informations */
+.container-info {
+  display: flex;
+  flex-direction: column; /* Aligne les éléments verticalement */
+  width: 100%;            /* Prend toute la largeur */
+}
+
+/* Séparateur blanc en haut */
+.top-separator {
+  width: 100%;          
+  border: none;           
+  border-top: 1px solid white; 
+}
+
+/* Conteneur interne (pour les sous-conteneurs) */
+.inner-container {
+  display: flex;         
+  flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+  width: 100%;          
+  gap: 10px;             
+}
+
+/* Sous-conteneurs */
+.sub-container {
+  flex: 1;                /* Permet à chaque sous-conteneur de prendre un espace égal */
+  color: white;           
+  /*padding: 10px;        */
+  font-size: 16px;       
+}
+
+/* Séparateur blanc entre les sous-conteneurs */
+.middle-separator {
+  width: 1px;             /* Largeur du séparateur */
+  background-color: white; /* Couleur blanche */
+  /*margin: 0;              /* Pas de marge autour */
+}
+
+/* Conteneur principal */
+.containerfruits {
+  position: relative;        
+  width: 100%;                
+  max-width: 400px;         
+  margin: 0 auto;             
+  overflow: hidden;           /* Empêche tout débordement */
+}
+
+/* Conteneur Gout FP */
+.containerfruits-FP {
+  position: relative;         
+  width: 100%;                
+  max-width: 700px;           
+  margin: 0 auto;            
+  overflow: hidden;           /* Empêche tout débordement */
+
+}
+/* Image contenue dans le conteneur */
+.image {
+  width: 100%;                /* L'image s'adapte à la largeur du conteneur */
+  height: auto;               /* Conserve les proportions de l'image */
+  display: block;             /* Supprime l'espace blanc en dessous de l'image */
+}
+
+/* Texte superpose */
+.overlay-text {
+  position: absolute;         /* Permet de superposer le texte sur l'image */
+  top: 50%;                   /* Place le texte au centre vertical */
+  left: 50%;                  /* Place le texte au centre horizontal */
+  transform: translate(-50%, -50%); /* Centre parfaitement le texte */
+  width: 100%;                
+  text-align: center;         /* Centre le texte horizontalement */
+  font-size: calc(1.5vw + 10px); /* Taille responsive du texte (ajustée à la fenêtre) */
+  color: white;               
+  font-weight: bold;        
+
+}
+
+/* Texte superpose */
+.overlay-textFP {
+  position: absolute;         /* Permet de superposer le texte sur l'image */
+  top: 50%;                   /* Place le texte au centre vertical */
+  left: 50%;                  /* Place le texte au centre horizontal */
+  transform: translate(-50%, -50%); /* Centre parfaitement le texte */
+  width: 100%;                /* Le texte occupe toute la largeur du conteneur */
+  text-align: center;         /* Centre le texte horizontalement */
+  font-size: calc(4vw + 15px); /* Taille responsive du texte (ajustée à la fenêtre) */
+  color: white;              
+  font-weight: bold;         
+  line-height: 1.5; 
+  padding-bottom: 10px;
+}
+
+/* Première ligne de texte */
+.line-1 {
+  font-size: calc(1.5vw + 10px); /* Taille responsive du texte (modifiee selon la fenetre) */
+  color: white;            
+  font-weight: bold;          
+  text-transform: uppercase;  
+  margin: 0;                  /* Supprime toute marge */
+  line-height: 0.6;           /* Ajuste l'espacement vertical */
+}
+
+/* Deuxieme ligne de texte */
+.line-2 {
+  font-size: calc(1.5vw + 10px); 
+  color: white;                 /* Texte en blanc */
+  font-weight: bold;         
+  text-transform: uppercase;    
+  margin: 0;                    /* Supprime toute marge */
+  line-height: 0.6;             /* Ajuste l'espacement vertical */
+}
+
+/* Première ligne de texte dans les photos Page d'accueil*/
+.line-1FP {
+  font-size: calc(4vw + 15px); /* Taille responsive du texte (modifiee selon la fenetre) */
+  color: white;              
+  font-weight: bold;         
+  text-transform: uppercase;  /* Texte en majuscules */
+  margin: 0;                  /* Supprime toute marge */
+  line-height: 1.2;           /* Ajuste l'espacement vertical */
+}
+
+/* Deuxieme ligne de texte dans les photos page d'accueil*/
+.line-2FP {
+  font-size: calc(4vw + 15px); 
+  color: white;                 
+  font-weight: bold;         
+  text-transform: uppercase;    
+  margin: 0;                    /* Supprime toute marge */
+  line-height: 0.6;             /* Ajuste l'espacement vertical */
+}
+
+
+/* Styles pour le conteneur principal en haut */
+.bottle-container1 {
+  height: clamp(70vh, 90vw, 90vh); /* Ajuste la hauteur en fonction de la largeur et de la hauteur de l'écran */
+  background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10% 10% 40% 40% / 0% 0% 10% 10%;
+  overflow: hidden;
+}
+
+
+.page .entry-title { /*Désactive l'affichage du titre de toutes les pages*/
+  display: none;
+}
+
+.bloc-fraise {
+  background-image: "http://127.0.0.1/Pages/P61/wp-content/uploads/2024/11/Group-4.png";
+  max-width: 300px;
+}
+
+.pamplemousse {
+  background-image: "http://127.0.0.1/Pages/P61/wp-content/uploads/2024/11/Group-4.png";
+}
+
+.text-picture {
+  max-width: 10px;
+}
+
+/* Importation de la police Syne depuis Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@800&display=swap');
+
+/* Définition de la classe "gout" */
+.gouts {
+    font-family: 'Syne', sans-serif; 
+    font-weight: 800;               
+    font-size: 30px;               
+    line-height: 36px;              /* Hauteur de ligne */
+    color: #D2776A;                
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+/* Définition de la classe "main-text" pour la mise en page du texte*/
+.main-text {
+  font-family: 'Syne', sans-serif; /* Utilise la police Syne */
+  font-weight: 400;               
+  font-size: 20px;               
+  line-height: 24px;             
+  color: #000000;                
+  padding-bottom: 40px;
+  
+}
+
+/* Définition de la classe "main-title" pour le titre principal*/
+.main-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;               
+  font-size: 38px;               
+  line-height: 45.6px;              
+  color: #3B8E46;                 
+  
+}
+
+/* Définition de la classe "main-title" pour le titre principal*/
+.pensent {
+  font-family: 'Syne', sans-serif; 
+  font-weight: 800;               
+  font-size: 30px;               
+  line-height: 36px;              
+  color: #3B8E46;                 
+  padding-top: 50px;
+  padding-bottom: 30px;
+  
+}
+
+/* Définition de la classe "gout" */
+.energie {
+  font-family: 'Syne', sans-serif; 
+  font-weight: 700;               
+  font-size: 30px;                
+  line-height: 36px;             
+  color: #3B8E46;                
+  padding-top: 50px;
+  padding-bottom: 35px;
+  
+}
+
+/* Définition de la classe "gout" */
+.avis {
+  padding-top: 50px;
+  padding-bottom: 60px;
+  
+}
+
+/* Définition de la classe décrivant la fin de page */
+.end-page {
+  
+  padding-bottom: 60px;
+  
+}
+
+/* Conteneur principal */
+.page-commande {
+  display: flex;
+  justify-content: center;
+}
+
+/* Contenu centré */
+.content-container {
+  width: 70%;
+}
+
+/* Style pour un affichage responsive */
+@media (max-width: 768px) {
+  .content-container {
+      width: 90%; /* Ajustement pour mobiles */
+  }
+}
+
+.titre-commander {
+  font-family: 'Syne', sans-serif; 
+  font-weight: 800;               
+  font-size: 35px;               
+  line-height: 45.6px;            
+  color: white;                 
+  padding-top: 1px;
+  padding-bottom: 10px;
+  align-items: center ! important;
+}
+
+
+.sous-titre-commander {
+  font-family: 'Syne', sans-serif; 
+  font-weight: 600;               
+  font-size: 25px;                
+  line-height: 26px;             
+  color: white;                
+  padding-top: 1px;
+  padding-bottom: 20px;
+}
+
+.marges {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.demasque {
+  border: 10px;
+  border-color: white;
+  justify-content: center;
+}
+
+
+/* Appliquer un style général au corps */
+
+
+/* Container principal avec Flexbox */
+.container-global {
+  display: flex; /* Active Flexbox */
+  flex-direction: raw;
+  width: 100%;
+  height: 100vh; /* Hauteur totale de la fenêtre */
+}
+
+/* Sous-containers */
+.sub-cont {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Styles spécifiques pour chaque sous-container */
+#leftcont {
+  width: 10%;
+}
+
+#maincont {
+  width: 80%;
+}
+
+#rightcont {
+  width: 10%;
+}
+
+.text-form {
+  font-family: 'Syne', sans-serif; 
+  font-weight: 400;               
+  font-size: 20px;                
+  /*line-height: 24px;  */            
+  color: white;                
+  border-radius: 10%;
+  border-color: white;
+}
+
+.buttton {
+  align-items: center;
+  color: red;
+}
+
+.buttton-rectangle p {
+  align-items: center ! important;
+  margin: 0 ! important;
+}
+
+.space-fruits {
+  padding-top: 20px;
+  gap: 20px;
+}
+
+.space-fruits1 {
+  padding-top: 20px;
+  gap: 20px;
+}
+
+.page-id-1155 {
+  background-color: #3B8E46 ! important;
+}
+
+.organisation {
+  display: flex; /* Active le modèle Flexbox */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  /*height: 100vh; /* Assure une hauteur couvrant tout l'écran (modifiez si nécessaire) */
+}
+
+
+@media (max-width: 480px) {
+  .syne-police-verte {
+    font-size: 14px ! important ; /* Taille minimum */
+  }
+}
+
+@media (min-width: 1200px) {
+  .syne-police-verte {
+    font-size: 24px ! important ; /* Taille maximum */
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 830px) {
+  .header-container {
+    display: flex;                /* Active le comportement flexbox */
+    flex-direction: column;       /* Aligne les éléments les uns sous les autres */
+    justify-content: center;      /* Centre les éléments verticalement */
+    align-items: center;          /* Centre les éléments horizontalement */
+    max-width: 100%;              /* S'assure que le conteneur occupe toute la largeur */
+    margin: 0 auto;               /* Centrage horizontal du conteneur */
+    gap: 10px;                    /* Ajoute de l'espacement entre les éléments */
+}
+}
+
+@media (max-width: 830px) {
+  .menus {
+    flex-direction: column;    /* Aligne les éléments en colonne (les uns sous les autres) */
+    align-items: center;       /* Centre les éléments horizontalement */
+    gap: 15px;                 /* Ajoute un espacement vertical entre les éléments */
+  }
+}
