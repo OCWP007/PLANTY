@@ -14,20 +14,6 @@ function load_additional_stylesheets() {
 }
 
 
-// Ajouter un lien "Admin" dans le menu uniquement pour les utilisateurs connectés
-//add_filter( 'wp_nav_menu_items', 'add_admin_link_to_menu', 10, 2 );
-
-//function add_admin_link_to_menu( $items, $args ) {
-    // Vérifier si l'utilisateur est connecté et si le menu est celui de la navigation principale
-//    if ( is_user_logged_in() && $args->theme_location == 'menu_1' ) {
-        // Ajouter le lien "Admin" au menu
- //       $admin_link = '<li><a href="' . admin_url() . '">Admin</a></li>';
- //       $items .= $admin_link;
- //   }
- //   return $items;
-//}
-
-
 function add_admin_link_to_menu( $items, $args ) {
     // Vérifier si l'utilisateur est connecté et si le menu est le menu principal
     if ( is_user_logged_in() && $args->theme_location === 'primary-menu' ) {

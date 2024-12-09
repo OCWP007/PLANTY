@@ -1,28 +1,17 @@
 <?php
 /**
- * The template for displaying the footer.
+ * Footer Template
  *
- * Contains the body & html closing tags.
- *
- * @package HelloElementor
+ * This template is used to display the footer section of the site.
  */
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
-}
-
-if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_location( 'footer' ) ) {
-	if ( hello_elementor_display_header_footer() ) {
-		if ( did_action( 'elementor/loaded' ) && hello_header_footer_experiment_active() ) {
-			get_template_part( 'template-parts/dynamic-footer' );
-		} else {
-			get_template_part( 'template-parts/footer' );
-		}
-	}
-}
 ?>
+<footer class="custom-footer">
+    <div class="footer-container">
+        <a href="http://127.0.0.1/Pages/P61/" class="legal-link">Mentions légales</a>
+    </div>
+</footer>
 
 <?php wp_footer(); ?>
-
 </body>
 </html>
+

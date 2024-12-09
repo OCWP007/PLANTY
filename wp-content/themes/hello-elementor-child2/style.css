@@ -15,13 +15,12 @@ Updated: 2024-10-18 08:55:49
 .page-container {
   display: flex;               
   flex-direction: column;
-  justify-content: center;       /* Centre horizontalement */
-  align-items: center;           /* Centre verticalement */
+  justify-content: center;       
+  align-items: center;           
   width: 100%;                  
-  height: 75vh;                 /* Hauteur de la fenêtre */
+  height: 75vh;                 
   background-color: #ECE2DA;     
   border-radius: 10% 10% 40% 40% / 0% 0% 10% 10% ;
-
 }
 
 /* Conteneur contenant le titre */
@@ -50,8 +49,7 @@ Updated: 2024-10-18 08:55:49
 
 .bloc-container {
   display: flex;              
-  justify-content: center;       
-  align-items: top;           
+  justify-content: center;          
   width: 100%;                   
   height: 100vh;                
   background-color: #ECE2DA;    
@@ -136,7 +134,6 @@ Updated: 2024-10-18 08:55:49
 .bottle-container1 {
   width: 100%; /* Largeur pleine de l'écran */
   height: 90vh; /* Hauteur réduite à 50% de l'écran */
-  background-color: var(--main-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -310,7 +307,6 @@ Updated: 2024-10-18 08:55:49
 
 .fruit-item-FP {
   display: flex;
-  flex-direction: raw;
   align-items: center;
   max-width: 200px; /* Augmente la taille du conteneur pour accueillir les grandes images */
 }
@@ -334,7 +330,6 @@ Updated: 2024-10-18 08:55:49
 
 .syne-police-verte {
   font-family: "Syne", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
   font-size: calc(14px + 1vw) ! important ; /* Taille flexible */
@@ -398,7 +393,6 @@ Updated: 2024-10-18 08:55:49
 /* Menus à droite */
 .menus {
   display: flex;
-  flex-direction: raw;
   gap: 20px; /* Espace entre les deux menus */
 }
 
@@ -499,8 +493,7 @@ Updated: 2024-10-18 08:55:49
 .alignement {
   display: flex;           
   flex-direction: row;      
-  justify-content: flex-start; 
-  align-items: top;      
+  justify-content: flex-start;   
 }
 
 .haut-boutons {
@@ -509,7 +502,6 @@ Updated: 2024-10-18 08:55:49
 
 .fruit-button {
   background-color: #e0b9b4;
-  border-color: #e0b9b4;
   border-radius: 10%;
   color: white;
 }
@@ -653,7 +645,6 @@ Updated: 2024-10-18 08:55:49
 /* Styles pour le conteneur principal en haut */
 .bottle-container1 {
   height: clamp(70vh, 90vw, 90vh); /* Ajuste la hauteur en fonction de la largeur et de la hauteur de l'écran */
-  background-color: var(--main-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -668,12 +659,7 @@ Updated: 2024-10-18 08:55:49
 }
 
 .bloc-fraise {
-  background-image: "http://127.0.0.1/Pages/P61/wp-content/uploads/2024/11/Group-4.png";
   max-width: 300px;
-}
-
-.pamplemousse {
-  background-image: "http://127.0.0.1/Pages/P61/wp-content/uploads/2024/11/Group-4.png";
 }
 
 .text-picture {
@@ -857,14 +843,26 @@ Updated: 2024-10-18 08:55:49
 }
 
 .space-fruits {
+  /*display: flex;
+  flex-wrap: wrap;*/
   padding-top: 20px;
   gap: 20px;
 }
 
+/* Taille responsive : lorsque l'écran est plus petit (par exemple, moins de 600px), les éléments se placent en colonne */
+/*@media (max-width: 600px) {
+  .space-fruits {
+      flex-direction: column; /* Les éléments s'alignent maintenant en colonne */
+ /* }
+}*/
+
 .space-fruits1 {
+  /*display: flex;
+  flex-wrap: wrap;*/
   padding-top: 20px;
   gap: 20px;
 }
+
 
 .page-id-1155 {
   background-color: #3B8E46 ! important;
@@ -909,4 +907,46 @@ Updated: 2024-10-18 08:55:49
     align-items: center;       /* Centre les éléments horizontalement */
     gap: 15px;                 /* Ajoute un espacement vertical entre les éléments */
   }
+}
+
+/* Nouveau footer : */
+
+/* Style du footer */
+.custom-footer {
+  width: 100%;
+  height: 60px; /* Hauteur du footer */
+  background-color: #ffffff; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+/* Style du lien "Mentions légales" */
+.legal-link {
+  font-family: 'Syne', sans-serif; 
+  font-size: 16px; 
+  color: #000000; 
+  text-decoration: none; 
+}
+
+/* Effet de survol : changement de couleur */
+.legal-link:hover {
+  color: #800000; 
+}
+
+/* Taille de la police responsive */
+@media (max-width: 768px) {
+  .legal-link {
+      font-size: 14px; /* Réduire la taille de police sur les petits écrans */
+  }
+}
+
+@media (max-width: 480px) {
+  .legal-link {
+      font-size: 12px; /* Encore plus petite sur les très petits écrans */
+  }
+}
+
+.image-titre {
+  padding-top: 20px;
 }
